@@ -12,12 +12,14 @@ Cell::~Cell()
 
 }
 void Cell::addMine(bool mine)
+	has_mine =true ;
 {
 
 }
 int Cell::get_neighbours()
 {
-    return 0;
+
+    return neighbour_count;
 }
 void Cell::get_neighbours(std::vector<std::vector<Cell>> &grid, size_t x, size_t y)
 {
@@ -38,11 +40,11 @@ void Cell::get_neighbours(std::vector<std::vector<Cell>> &grid, size_t x, size_t
 }
 bool Cell::is_discovered()
 {
-    return false;
+    return revealed;
 }
 bool Cell::is_a_mine()
 {
-    return true;
+    return has_mine;
 }
 bool Cell::discover(std::vector<std::vector<Cell>> &grid, size_t x, size_t y)
 {
