@@ -9,7 +9,7 @@ void ncurses_initialiser()
     initscr();            /* Demarre le mode ncurses */
     cbreak();             /* Pour les saisies clavier (desac. mise en buffer) */
     noecho();             /* Desactive l'affichage des caracteres saisis */
-    keypad(stdscr, TRUE); /* Active les touches specifiques */
+    keypad(stdscr, TRUE); /* Active les touches speciques */
     refresh();            /* Met a jour l'affichage */
     curs_set(TRUE);       /* Masque le curseur */
 }
